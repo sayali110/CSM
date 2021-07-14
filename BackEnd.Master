@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BackEnd.master.cs" Inherits="CSM3.BackEnd" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="https://kit.fontawesome.com/bb8d5af95d.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div>
+<!-- Navigation Menu !-->
+<div class="main-menu">
+<img src="img/logo.png" class="car-logo" alt="Website-Logo" />
+<ul class="menu-list" style="margin-bottom: 15px;">
+<li class="menu-item"><a href="Welcome.aspx" class="nav-link"><i class="fas fa-home" style="color: #5cb85c;"></i>&nbsp;&nbsp;Home</a></li>
+<li class="menu-item"><a href="AdminUsers.aspx" class="nav- link"><i class="fa fa-users" style="color: #0275d8;"></i>&nbsp;&nbsp;Users</a></li>
+<div class="dropdown">
+<button class="dropbtn"><i class="fab fa-hotjar" style="color: #d9534f;"></i>&nbsp;&nbsp;Brands <i class="fa fa-caret-down"></i></button>
+<div class="dropdown-content" style="right: 22%; margin-top:1px;">
+<a href="AdminAddBrands.aspx"><i class="fas fa-user-circle"></i>&nbsp;&nbsp;Add Brand</a>
+<a href="AdminShowBrands.aspx"><i class="fas fa-user- circle"></i>&nbsp;&nbsp;Show Brands</a>
+</div>
+</div>
+<div class="dropdown">
+<button class="dropbtn"><i class="fab fa-hotjar" style="color: #d9534f;"></i>&nbsp;&nbsp;Cars <i class="fa fa-caret-down"></i></button>
+<div class="dropdown-content" style="right: 14%; margin-top: 1px; min-width: 140px;">
+<a href="AdminAddCars.aspx"><i class="fas fa-user- circle"></i>&nbsp;&nbsp;Add Car</a>
+<a href="AdminShowCars.aspx"><i class="fas fa-user- circle"></i>&nbsp;&nbsp;Show Cars</a>
+</div>
+</div>
+<li class="menu-item"><a href="AdminDashboard.aspx" class="nav- link"><i class="fas fa-chart-line" style="color: #5cb85c;"></i>&nbsp;&nbsp;Dashboard</a></li>
+<div class="dropdown">
+<label id="dropbtn" class="dropbtn" runat="server"><i class="fa fa-user" style="color: yellow;"></i>&nbsp;&nbsp;<asp:Label ID="Label4" runat="server" Text="Your Profile"></asp:Label>&nbsp;<i class="fa fa-caret- down"></i></label>
+<div class="dropdown-content" style="margin-top: 15px;">
+<a href="Edit_Profile.aspx"><i class="fas fa-user- circle"></i>&nbsp;&nbsp;Edit Profile</a>
+<div class="dropdown-link-button">
+<i class="fas fa-sign-out-alt"></i>&nbsp;<asp:Button ID="Button2" runat="server" class="LogOut" Text="Log Out" OnClick="Button2_Click" />
+</div>
+</div>
+</div>
+</ul>
+</div>
+<!-- End of Navigation Menu !-->
+<asp:ContentPlaceHolder id="body" runat="server">
+</asp:ContentPlaceHolder>
+<!-- Footer Section !-->
+<div class="copyrightSection">
+<p><span style="font-size: 25px; margin-top: 500px">&copy;</span> Copyright 2018 by CAR SHOWROOM MANAGEMENT website. All rights reserved.</p>
+    </div>
+        </div>
+    </form>
+</body>
+</html>
